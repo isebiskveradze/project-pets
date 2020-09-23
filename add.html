@@ -21,7 +21,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="add.html" target="_blank">Add Pet</a>
+              <a class="nav-link" href="add.html" target="_target">Add Pet</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,49 +49,65 @@
 
         <a href="">Home</a>
         <a href="">About</a>
-        <a href="add.html" target="_target">Add</a>
+        <a href="add.html">Add</a>
         <a href="">Contact</a>
 
         </nav>
     </header> -->
 
-    <main>
-        <div class="search-div">
-
-            <input type="text" class="search-input" placeholder="მოძებნე შინაური ცხოველი სახელით">
-
-            <div id="formdiv">
-
-                <form action="info.html" id="form">
-        
-                    <input type="text" id="inputname" placeholder="ცხოველის სახეობა">
-                    <!-- <br> -->
-                    <input type="text" id="inputsurname" placeholder="ცხოველის სქესი">
-                    <!-- <br> -->
-                    <input type="number" id="inputage" placeholder="ცხოველის ასაკი">
-                    <!-- <br> -->
-                    <!-- <input type="text" id="inputplace" placeholder="input your living Place"> -->
-                    <!-- <br> -->
-                    <button type="button" id="button">Submit</button>
+    <div id="form">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Title</label>
+              <input type="text" id="title" class="form-control"aria-describedby="emailHelp">
             
-                </form>
-        
-            </div>
-
             
-
-        </div>
-
-        <div class="pet-list">
-           
-           
+              <label for="exampleInputEmail1">Pet</label>
+              <input type="text" id="pet" class="form-control" aria-describedby="emailHelp">
+              
             
-        </div>
-        
-    </main>
+              <label for="exampleInputEmail1">Price</label>
+              <input type="text" id="price" class="form-control" aria-describedby="emailHelp">
+              
+            
+              <label for="exampleInputEmail1">Description</label>
+              <textarea type="text" id="description" class="form-control" aria-describedby="emailHelp"></textarea>
+              
+            
+              <label for="exampleInputEmail1">Image</label>
+              <input type="text" id="image" class="form-control"  aria-describedby="emailHelp">
+              
+            
+              <label for="exampleInputEmail1">Person Name</label>
+              <input type="text" id="personName" class="form-control" aria-describedby="emailHelp">
+              
+            
+              <label for="exampleInputEmail1">Person Number</label>
+              <input type="text" id="personNumber" class="form-control" aria-describedby="emailHelp">
+              
+            
+              <label for="exampleInputEmail1">Adress</label>
+              <input type="text" id="adress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <br>
+            <!-- <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <button type="button" class="btn btn-primary" id="addbtn">Submit</button>
+          </form>
     
-    <script src="classes.js"></script>
-    <script src="index.js"></script>
+    </div>
+
+    
+
+
+
+
+
+
+
+<script src="classes.js"></script>
+<script src="add.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

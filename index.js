@@ -1,79 +1,36 @@
-class Statement{
-    constructor(contactPersonName, contactPersonNumber, address, description, pet, price, title, img ){
+const petList = document.querySelector('.pet-list');
 
-        this.contactPersonName = contactPersonName;
-        this.contactPersonNumber = contactPersonNumber;
-        this.address = address;
-        this.description = description;
-        this.pet = pet;
-        this.price = price;
-        this.title = title;
-        this.img = img;
-        
-    }
+
+const statement = new Statement('ჩუქდება თეთრი კნუტი, 1 თვის', 'კატა', '0', 'ძალიან საყვარელი', 'whitecat.jpg', 'დემნა', '599 99 99 99', 'თბილისი' )
+const statement1 = new Statement('იყიდება ტოი ტერიერი, 2 თვის','ძაღლი', '0', 'ძალიან საყვარელი', 'dog.jpg', 'დემნა', '599 99 99 99', 'თბილისი')
+const statement2 = new Statement('იყიდება თუთიყუში, 3 თვის','თუთიყუში', '0', 'ძალიან საყვარელი', 'parrot.jpg', 'დემნა', '599 99 99 99', 'თბილისი')
+
+const statementArray = [statement, statement1, statement2];
+
+const appendStatement = (joni) => {
+    const statementTemplate = `            
+    <div class="statement">
+    <p class="title">${joni.title}</p>
+    <p class="title">${'ცხოველი: ' + joni.pet}</p>
+    <p class="title">${'ფასი: ' + joni.price}</p>
+    <p class="descript">${'დახასიათება: ' + joni.description}</p>
+    <img src=${joni.img} alt="" class="statement-img">
+    <p class="author-info">ავტორის სახელი:  ${' ' + joni.contactPersonName}</p>
+    <p class="author-info">ავტორის ნომერი:  ${' ' + joni.contactPersonNumber}</p>
+    <p class="author-info">ავტორის ნომერი:  ${' ' + joni.address}</p>
+</div>`;
+petList.innerHTML += statementTemplate
+ 
+  
+}
+
+for (let i = 0; i < statementArray.length; i++) {
+    
+    appendStatement(statementArray[i]);
+    
 }
 
 
-class Pet{
-constructor(category, age, gender ){
 
-    this.category = category;
-    this.age = age;
-    this.gender = gender;
-
-}
-}
-class Cat extends Pet{
-
-    constructor(category, age, gender, toiletFrendly, vaccination){
-        super(category, age, gender);
-        this.toiletFrendly = toiletFrendly;
-        this.vaccination = vaccination;
-
-    }
-
-}
-
-class Dog extends Pet {
-    constructor(category, age, gender, toiletFrendly, noisy, vaccination){
-        super(category, age, gender)
-        this.toiletFrendly = toiletFrendly;
-        this.noisy = noisy;
-        this.vaccination = vaccination;
-
-    }
-}
-
-class Bird extends Pet {
-    constructor(category, age, gender, noisy, humanFriendly ){
-        super(category, age, gender);
-        this.noisy = noisy;
-        this.humanFriendly = humanFriendly;
-
-    }
-}
-class Rabbit extends Pet {
-    constructor(category, age, gender, humanFriendly){
-        super(category,age, gender);
-        this.humanFriendly = humanFriendly;
-    }
-}
-class Fish extends Pet {
-    constructor(category, age, gender, coldWater, warmWater, predator, peaceful){
-        super(category,age, gender);
-        this.coldWater = coldWater;
-        this.warmWater = warmWater;
-        this.predator = predator;
-        this.peaceful = peaceful;
-    }
-}
-class hamster extends Pet {
-    constructor(category, age, gender, humanFriendly){
-        super(category,age, gender);
-        this.humanFriendly = humanFriendly;
-    }
-}
-
-const statement = new Statement( 'დემნა', '599 99 99 99', 'თბილისი', 'ძალიან საყვარელი', null, 0, 'ჩუქდება თეთრი კნუტი, 1 თვის', null )
 
 
