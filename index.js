@@ -1,4 +1,6 @@
 const petList = document.querySelector('.pet-list');
+const searchInput = document.getElementById('searchinput');
+const searchBtn = document.getElementById('searchbtn');
 
 
 const statement = new Statement('ჩუქდება თეთრი კნუტი, 1 თვის', 'კატა', '0', 'ძალიან საყვარელი', 'whitecat.jpg', 'დემნა', '599 99 99 99', 'თბილისი' )
@@ -24,11 +26,48 @@ petList.innerHTML += statementTemplate
   
 }
 
-for (let i = 0; i < statementArray.length; i++) {
+// for (let i = 0; i < statementArray.length; i++) {
     
-    appendStatement(statementArray[i]);
+//     var statementArrayAll = appendStatement(statementArray[i]);
     
+// }
+
+const appendAllStatements = (statements) => {
+    for (const statement of statements) {
+        appendStatement(statement);
+    }
 }
+
+appendAllStatements(statementArray);
+
+// console.log(appendAllStatements);
+
+
+searchBtn.addEventListener('click', () => {
+
+    petList.innerHTML = ' ';
+    if(searchInput.value === ' '){
+        appendStatement(appendAllStatements);
+        return;
+    }
+    const filteredArr = appendAllStatements.filter(function(statement){
+        // if (statement.title === searchInput.value) {
+        //     return true;
+            
+        // }else{
+
+        //     return false;
+
+        // }
+        return statement.title.includes(searchInput.value);
+    });
+
+    appendStatement(filteredArr);
+
+   
+
+
+    });
 
 
 
